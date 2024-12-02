@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrQ-VU-VLy">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dvg-Ql-lhu">
+            <objects>
+                <navigationController id="RrQ-VU-VLy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PTO-iv-zlC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tbr-1d-mre" kind="relationship" relationship="rootViewController" id="8PE-uK-mQo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bI-kX-0I3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1611" y="-344"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7c1-cO-3KS">
+            <objects>
+                <viewController id="tbr-1d-mre" customClass="ViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkB-zV-qEt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKi-5C-6nm">
+                                <rect key="frame" x="125" y="454" width="144" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выбрать город"/>
+                                <connections>
+                                    <segue destination="njl-Vq-ZC4" kind="show" id="1dd-iq-ofk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-L5-ioz">
+                                <rect key="frame" x="159" y="371" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="EVG-hI-Fdh" kind="show" id="FWA-FD-O9z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Auv-j2-Ed9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H8b-Cc-wDO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vou-ed-CE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="-349"/>
+        </scene>
+        <!--Первый экран-->
+        <scene sceneID="0vq-6C-98k">
+            <objects>
+                <viewController title="Первый экран" id="EVG-hI-Fdh" customClass="MyNameViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgg-yh-oIf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-rA-VS2">
+                                <rect key="frame" x="127" y="457" width="138" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Изменить имя"/>
+                                <connections>
+                                    <action selector="toEditName" destination="EVG-hI-Fdh" eventType="touchUpInside" id="f4b-wV-pbn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Без имени" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt5-HQ-DTb">
+                                <rect key="frame" x="154" y="350" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hAe-0j-3mp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Первый экран" id="FO0-z1-L6P"/>
+                    <connections>
+                        <outlet property="myNameLabel" destination="nt5-HQ-DTb" id="pM2-bl-Hmf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sj5-82-HKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="-813"/>
+        </scene>
+        <!--Выберите город-->
+        <scene sceneID="OOQ-tc-jo0">
+            <objects>
+                <viewController restorationIdentifier="citiecVC" storyboardIdentifier="citiecVC" title="Выберите город" id="sRB-7s-Fhp" customClass="CitiesViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Yh-2o-AZC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zep-Hp-gjh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="gV1-dN-l3V" customClass="CityTableViewCell" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="72.666664123535156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gV1-dN-l3V" id="GcD-OO-VFb">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="72.666664123535156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68M-jA-b13">
+                                                    <rect key="frame" x="35" y="26" width="323" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="68M-jA-b13" firstAttribute="leading" secondItem="GcD-OO-VFb" secondAttribute="leadingMargin" constant="15" id="4Ss-DM-FCH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="68M-jA-b13" secondAttribute="trailing" constant="15" id="d1H-wr-bfn"/>
+                                                <constraint firstItem="68M-jA-b13" firstAttribute="top" secondItem="GcD-OO-VFb" secondAttribute="topMargin" constant="15" id="gfC-rK-a5P"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="68M-jA-b13" secondAttribute="bottom" constant="15" id="mBI-IA-Rw2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="68M-jA-b13" id="9xT-dv-mmF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o6B-y8-kDU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o6B-y8-kDU" firstAttribute="trailing" secondItem="Zep-Hp-gjh" secondAttribute="trailing" id="0Og-2e-GB7"/>
+                            <constraint firstAttribute="bottom" secondItem="Zep-Hp-gjh" secondAttribute="bottom" id="Ap0-xc-zSa"/>
+                            <constraint firstItem="Zep-Hp-gjh" firstAttribute="top" secondItem="o6B-y8-kDU" secondAttribute="top" id="Za5-qJ-5O2"/>
+                            <constraint firstItem="Zep-Hp-gjh" firstAttribute="leading" secondItem="o6B-y8-kDU" secondAttribute="leading" id="luz-aL-XVC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Zep-Hp-gjh" id="mmI-yi-YAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTB-pY-afS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-83"/>
+        </scene>
+        <!--Второй экран-->
+        <scene sceneID="7ia-NL-ZhH">
+            <objects>
+                <viewController restorationIdentifier="EditNameVC" storyboardIdentifier="EditNameVC" id="oKw-nJ-6Y7" customClass="EditNameViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2YW-YD-Gph">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-bx-wSA">
+                                <rect key="frame" x="47" y="338" width="286" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8r-s1-rHM">
+                                <rect key="frame" x="139" y="469" width="115" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Применить"/>
+                                <connections>
+                                    <action selector="editButtonClick" destination="oKw-nJ-6Y7" eventType="touchUpInside" id="MUT-WW-tj2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Xg-yy-SrQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Второй экран" id="9Gs-Cy-DgZ"/>
+                    <connections>
+                        <outlet property="editNameTextField" destination="RkK-bx-wSA" id="cZT-h7-JuK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZwT-dl-VDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-813"/>
+        </scene>
+        <!--Current City View Controller-->
+        <scene sceneID="gJE-CS-a35">
+            <objects>
+                <viewController id="njl-Vq-ZC4" customClass="CurrentCityViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BSQ-Rh-R3u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город не выбран" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr1-hC-L8T">
+                                <rect key="frame" x="129" y="148" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="in6-sz-e5t">
+                                <rect key="frame" x="159" y="201" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="changeCityDidClick" destination="njl-Vq-ZC4" eventType="touchUpInside" id="CcR-pJ-EkN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gqE-Rk-XtQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vr1-hC-L8T" firstAttribute="top" secondItem="gqE-Rk-XtQ" secondAttribute="top" constant="45" id="14N-07-vzH"/>
+                            <constraint firstItem="in6-sz-e5t" firstAttribute="centerX" secondItem="gqE-Rk-XtQ" secondAttribute="centerX" id="auh-cR-sbs"/>
+                            <constraint firstItem="in6-sz-e5t" firstAttribute="top" secondItem="vr1-hC-L8T" secondAttribute="bottom" constant="32" id="mk2-Q2-1Te"/>
+                            <constraint firstItem="vr1-hC-L8T" firstAttribute="centerX" secondItem="BSQ-Rh-R3u" secondAttribute="centerX" id="n9f-U7-5qM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tLa-nS-F8v"/>
+                    <connections>
+                        <outlet property="currentCity" destination="vr1-hC-L8T" id="zN7-t4-k9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Goz-iw-gHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="-83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
